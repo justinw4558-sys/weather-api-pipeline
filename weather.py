@@ -2,8 +2,11 @@ import requests
 import json
 import time
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
-API_KEY = "0c450b7b3e5443e78fa175145261304"
+load_dotenv()
+API_KEY = os.getenv("WEATHER_API_KEY")
 
 api_url = "https://api.weatherapi.com/v1/forecast.json" # API endpoint for forecast weather
 
